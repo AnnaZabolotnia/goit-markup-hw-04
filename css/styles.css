@@ -163,6 +163,7 @@ img {
   letter-spacing: 0.02em;
   padding: 24px 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 .header-menu-link:hover,
 .header-menu-link:focus {
@@ -449,9 +450,10 @@ img {
 .costomers-icon {
   width: 104px;
   height: 56px;
+  fill: currentColor;
 }
-.costomers-icon:hover,
-.costomers-icon:focus {
+.costomers-link:hover,
+.costomers-link:focus {
   border-color: #404bbf;
   color: #404bbf;
 }
@@ -543,7 +545,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50px;
+  border-radius: 50%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-link:hover,
@@ -681,7 +683,8 @@ img {
   top: 0;
   left: 0;
   background-color: var(--navyblue-modal, rgba(46, 47, 66, 0.4));
-  transition: opacity 0.3ms ease, visibility 0.3ms ease;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
   position: absolute;
@@ -722,6 +725,7 @@ img {
 .modal-close-button:focus {
   background-color: #404bbf;
   border: none;
+  fill: #ffffff;
 }
 .modal-close-icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
