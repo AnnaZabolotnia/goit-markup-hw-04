@@ -140,11 +140,11 @@ img {
   position: relative;
   color: #404bbf;
 }
-.header-menu-item:first-child .header-menu-link {
+.header-menu-item:not(:last-child) .header-menu-link {
   color: var(--color-ocean);
 }
 
-.header-menu-item:first-child .header-menu-link::after {
+.header-menu-item:not(:last-child) .header-menu-link::after {
   content: "";
   position: absolute;
   left: 0;
