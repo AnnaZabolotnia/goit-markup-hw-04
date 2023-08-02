@@ -454,8 +454,6 @@ img {
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .costomers-icon {
-  width: 104px;
-  height: 56px;
   fill: currentColor;
 }
 .costomers-link:hover,
