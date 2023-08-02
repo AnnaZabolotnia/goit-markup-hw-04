@@ -137,10 +137,8 @@ img {
   text-transform: uppercase;
 }
 .header-menu-item {
-  position: relative;
-  color: #404bbf;
 }
-.header-menu-item:not(:last-child) .header-menu-link {
+/* .header-menu-item:not(:last-child) .header-menu-link {
   color: var(--color-ocean);
 }
 
@@ -153,7 +151,7 @@ img {
   height: 4px;
   border-radius: 2px;
   background-color: var(--color-ocean);
-}
+} */
 
 .header-menu-link {
   color: var(--color-navy-blue);
@@ -164,6 +162,20 @@ img {
   padding: 24px 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+}
+.current {
+  position: relative;
+  color: var(--color-ocean);
+}
+.current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: -1px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--color-ocean);
 }
 .header-menu-link:hover,
 .header-menu-link:focus {
@@ -421,12 +433,6 @@ img {
 .costomers-item {
   width: calc((100% - 120px) / 6);
   height: 88px;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #8e8f99;
 }
 
 .costomers-item:hover,
@@ -505,16 +511,11 @@ img {
 }
 
 .footer-container {
-  width: 100%;
   display: flex;
   align-items: baseline;
-  margin-left: 156px;
 }
 
 .footer-social {
-  flex-direction: column;
-  align-items: flex-start;
-  margin-right: 120px;
 }
 .footer-social-text {
   color: var(--white, #fff);
@@ -636,9 +637,6 @@ img {
 
 .gallery-portfolio-link {
   display: block;
-  position: relative;
-  color: #404bbf;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .gallery-portfolio-link:hover,
 .gallery-portfolio-link:focus {
@@ -653,7 +651,7 @@ img {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  margin-top: 32px;
+
   margin-bottom: 8px;
 }
 .container-galrery-text {
@@ -670,8 +668,8 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-.gallery-portfolio-img:hover .gallery-img-text,
-.gallery-portfolio-img:focus .gallery-img-text {
+.gallery-portfolio-link:hover .gallery-img-text,
+.gallery-portfolio-link:focus .gallery-img-text {
   transform: translateY(0%);
 }
 
